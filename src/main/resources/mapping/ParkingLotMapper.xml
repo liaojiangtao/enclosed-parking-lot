@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fangle.parking.dao.ParkingLotDao">
+
+    <resultMap id="BaseResultMap" type="com.fangle.parking.entity.ParkingLot">
+        <id column="parking_lot_id" property="parkingLotId" jdbcType="INTEGER" />
+        <id column="parking_lot_name" property="parkingLotName" jdbcType="VARCHAR" />
+        <id column="effect_time" property="effectTime" jdbcType="INTEGER" />
+        <id column="update_time" property="updateTime" jdbcType="INTEGER" />
+        <id column="create_time" property="createTime" jdbcType="INTEGER" />
+    </resultMap>
+
+    <select id="selectAllParkingLot" resultMap="BaseResultMap">
+        SELECT parking_lot_id, parking_lot_name, effect_time, update_time, create_time
+        FROM parking_lot_info
+    </select>
+
+</mapper>
