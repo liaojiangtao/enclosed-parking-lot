@@ -1,6 +1,6 @@
 package com.fangle.parking.service.impl;
 
-import com.fangle.parking.dao.ParkingLotDao;
+import com.fangle.parking.mapper.ParkingLotMapper;
 import com.fangle.parking.entity.ParkingLot;
 import com.fangle.parking.service.ParkingLotService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,10 +13,10 @@ import java.util.List;
 @Slf4j
 public class ParkingLotServiceImpl implements ParkingLotService {
     @Autowired
-    private ParkingLotDao parkingLotDao;
+    private ParkingLotMapper parkingLotMapper;
 
     @Override
     public List<ParkingLot> selectAllParkingLot() {
-        return parkingLotDao.selectAllParkingLot();
+        return parkingLotMapper.selectAllParkingLot();
     }
 }
