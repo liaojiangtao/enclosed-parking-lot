@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fangle.parking.mapper.ParkingRealMapper">
+
+    <!--<resultMap id="BaseResultMap" type="com.fangle.parking.entity.ParkingReal">-->
+        <!--<id column="parking_order" property="parkingOrder" jdbcType="VARCHAR"/>-->
+        <!--<id column="plate_number" property="plateNumber" jdbcType="VARCHAR"/>-->
+        <!--<id column="plate_color" property="plateColor" jdbcType="INTEGER"/>-->
+        <!--<id column="car_color" property="carColor" jdbcType="INTEGER"/>-->
+        <!--<id column="car_type" property="carType" jdbcType="INTEGER"/>-->
+        <!--<id column="arrive_time" property="arriveTime" jdbcType="DATETIME"/>-->
+        <!--<id column="entrance_num" property="entranceNum" jdbcType="INTEGER"/>-->
+        <!--<id column="arrive_pic_url" property="arrivePicUrl" jdbcType="VARCHAR"/>-->
+        <!--<id column="arrive_pic_upStatus" property="arrivePicUpStatus" jdbcType="INTEGER"/>-->
+        <!--<id column="arrive_up_status" property="arriveUpStatus" jdbcType="INTEGER"/>-->
+        <!--<id column="enter_type" property="enterType" jdbcType="INTEGER"/>-->
+        <!--<id column="create_time" property="createTime" jdbcType="DATETIME"/>-->
+        <!--<id column="update_time" property="updateTime" jdbcType="DATETIME"/>-->
+    <!--</resultMap>-->
+
+    <!--<select id="selectAllParkingReal" resultMap="BaseResultMap">-->
+        <!--SELECT parking_order, plate_number, plate_color, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type, create_time, update_time-->
+        <!--FROM parking_real-->
+    <!--</select>-->
+
+    <!--<insert id="insertParkingReal" useGeneratedKeys="true" keyColumn="id" keyProperty="id">-->
+        <!--INSERT INTO-->
+        <!--parking_real(parking_order, plate_number, plate_color, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type)-->
+         <!--VALUES-->
+         <!--(#{parkingOrder},#{plateNumber},#{plateColor},#{carColor},#{carType},#{arriveTime},#{entranceNum},#{arrivePicUrl},#{arrivePicUpStatus},#{arriveUpStatus},#{enterType})-->
+    <!--</insert>-->
+
+</mapper>

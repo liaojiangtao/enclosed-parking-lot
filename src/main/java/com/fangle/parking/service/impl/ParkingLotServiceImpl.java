@@ -19,4 +19,9 @@ public class ParkingLotServiceImpl implements ParkingLotService {
     public List<ParkingLot> selectAllParkingLot() {
         return parkingLotMapper.selectAllParkingLot();
     }
+
+    @Override
+    public Integer insertParkingLot(ParkingLot parkingLot) {
+        return parkingLotMapper.insertParkingLot(parkingLot);
+    }
 }

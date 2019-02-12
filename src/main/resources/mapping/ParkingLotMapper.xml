@@ -15,4 +15,11 @@
         FROM parking_lot_info
     </select>
 
+    <insert id="insertParkingLot" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO
+        parking_lot_info(parking_lot_id, parking_lot_name, effect_time)
+         VALUES
+         (#{parkingLotId},#{parkingLotName},#{effectTime})
+    </insert>
+
 </mapper>

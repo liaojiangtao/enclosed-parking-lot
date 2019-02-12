@@ -8,4 +8,7 @@ public interface ParkingLotService {
 
     /** 查询所有停车场 */
     List<ParkingLot> selectAllParkingLot();
+
+    /** 插入停车场信息 */
+    Integer insertParkingLot(ParkingLot parkingLot);
 }
