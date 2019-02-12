@@ -23,21 +23,21 @@ public class ParkingLotServiceImplTest {
     ParkingLotService parkingLotService;
 
     @Test
-    public void selectAllParkingLot() {
-        List<ParkingLot> parkingLots = parkingLotService.selectAllParkingLot();
-
-        Assert.assertEquals("100001", parkingLots.get(0).getParkingLotId());
-    }
-
-    @Test
     public void insertParkingLot() throws Exception {
         ParkingLot parkingLot = new ParkingLot();
-        parkingLot.setParkingLotId("100002");
+        parkingLot.setParkingLotId("100001");
         parkingLot.setParkingLotName("惠恒大厦");
         parkingLot.setEffectTime(TimeUtil.StringToDate("2020-01-01 0:0:0"));
 
         Integer effect = parkingLotService.insertParkingLot(parkingLot);
 
         System.out.println(effect);
+    }
+
+    @Test
+    public void selectAllParkingLot() {
+        List<ParkingLot> parkingLots = parkingLotService.selectAllParkingLot();
+
+        Assert.assertEquals("100001", parkingLots.get(0).getParkingLotId());
     }
 }

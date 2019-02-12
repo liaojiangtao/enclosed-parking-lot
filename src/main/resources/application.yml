@@ -4,10 +4,10 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://127.0.0.1:3306/parking
+    url: jdbc:mysql://127.0.0.1:3306/parking?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
-    # Ê¹ÓÃdruidÊı¾İÔ´
+    # ä½¿ç”¨druidæ•°æ®æº
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat
@@ -24,12 +24,12 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
 
-## ¸ÃÅäÖÃ½ÚµãÎª¶ÀÁ¢µÄ½Úµã£¬Èç¹û½«Õâ¸öÅäÖÃ·ÅÔÚspringµÄ½ÚµãÏÂ£¬»áµ¼ÖÂÅäÖÃÎŞ·¨±»Ê¶±ğ
+## è¯¥é…ç½®èŠ‚ç‚¹ä¸ºç‹¬ç«‹çš„èŠ‚ç‚¹ï¼Œå¦‚æœå°†è¿™ä¸ªé…ç½®æ”¾åœ¨springçš„èŠ‚ç‚¹ä¸‹ï¼Œä¼šå¯¼è‡´é…ç½®æ— æ³•è¢«è¯†åˆ«
 mybatis:
-  mapper-locations: classpath:mapping/*.xml  #×¢Òâ£ºÒ»¶¨Òª¶ÔÓ¦mapperÓ³ÉäxmlÎÄ¼şµÄËùÔÚÂ·¾¶
-  type-aliases-package: com.fangle.parking.entity  # ×¢Òâ£º¶ÔÓ¦ÊµÌåÀàµÄÂ·¾¶
+  mapper-locations: classpath:mapping/*.xml  #æ³¨æ„ï¼šä¸€å®šè¦å¯¹åº”mapperæ˜ å°„xmlæ–‡ä»¶çš„æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.fangle.parking.entity  # æ³¨æ„ï¼šå¯¹åº”å®ä½“ç±»çš„è·¯å¾„
 
-#pagehelper·ÖÒ³²å¼ş
+#pagehelperåˆ†é¡µæ’ä»¶
 pagehelper:
   helperDialect: mysql
   reasonable: true

@@ -5,9 +5,9 @@
     <resultMap id="BaseResultMap" type="com.fangle.parking.entity.ParkingLot">
         <id column="parking_lot_id" property="parkingLotId" jdbcType="INTEGER" />
         <id column="parking_lot_name" property="parkingLotName" jdbcType="VARCHAR" />
-        <id column="effect_time" property="effectTime" jdbcType="INTEGER" />
-        <id column="update_time" property="updateTime" jdbcType="INTEGER" />
-        <id column="create_time" property="createTime" jdbcType="INTEGER" />
+        <id column="effect_time" property="effectTime" jdbcType="DATE" />
+        <id column="update_time" property="updateTime" jdbcType="DATE" />
+        <id column="create_time" property="createTime" jdbcType="DATE" />
     </resultMap>
 
     <select id="selectAllParkingLot" resultMap="BaseResultMap">
