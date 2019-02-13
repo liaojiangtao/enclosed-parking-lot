@@ -6,6 +6,7 @@
         <id column="parking_order" property="parkingOrder" jdbcType="VARCHAR"/>
         <id column="plate_number" property="plateNumber" jdbcType="VARCHAR"/>
         <id column="plate_color" property="plateColor" jdbcType="INTEGER"/>
+        <id column="plate_type" property="plateType" jdbcType="INTEGER"/>
         <id column="car_color" property="carColor" jdbcType="INTEGER"/>
         <id column="car_type" property="carType" jdbcType="INTEGER"/>
         <id column="arrive_time" property="arriveTime" jdbcType="DATE"/>
@@ -19,15 +20,15 @@
     </resultMap>
 
     <select id="selectAllParkingReal" resultMap="BaseResultMap">
-        SELECT parking_order, plate_number, plate_color, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type, create_time, update_time
+        SELECT parking_order, plate_number, plate_color, plate_type, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type, create_time, update_time
         FROM parking_real
     </select>
 
     <insert id="insertParkingReal" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         INSERT INTO
-        parking_real(parking_order, plate_number, plate_color, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type)
+        parking_real(parking_order, plate_number, plate_color, plate_type, car_color, car_type, arrive_time, entrance_num, arrive_pic_url, arrive_pic_upStatus, arrive_up_status, enter_type)
          VALUES
-         (#{parkingOrder},#{plateNumber},#{plateColor},#{carColor},#{carType},#{arriveTime},#{entranceNum},#{arrivePicUrl},#{arrivePicUpStatus},#{arriveUpStatus},#{enterType})
+         (#{parkingOrder},#{plateNumber},#{plateColor},#{plateType},#{carColor},#{carType},#{arriveTime},#{entranceNum},#{arrivePicUrl},#{arrivePicUpStatus},#{arriveUpStatus},#{enterType})
     </insert>
 
 </mapper>

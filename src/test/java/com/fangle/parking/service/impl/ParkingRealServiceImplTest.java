@@ -33,6 +33,7 @@ public class ParkingRealServiceImplTest {
         parkingReal.setParkingOrder("P201902131045010100001");
         parkingReal.setPlateNumber("粤B11111");
         parkingReal.setPlateColor(0);
+        parkingReal.setPlateType(0);
         parkingReal.setCarColor(0);
         parkingReal.setCarType(0);
         parkingReal.setArriveTime(TimeUtil.StringToDate("2019-02-13 10:45:01"));

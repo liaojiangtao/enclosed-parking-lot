@@ -9,6 +9,7 @@ public class ParkingReal {
     private String parkingOrder;    //停车订单
     private String plateNumber;    //车牌
     private Integer plateColor;    //车牌颜色
+    private Integer plateType;    //车牌类型
     private Integer carColor;    //车辆颜色
     private Integer carType;    //车辆类型
     private Date arriveTime;    //入场时间
