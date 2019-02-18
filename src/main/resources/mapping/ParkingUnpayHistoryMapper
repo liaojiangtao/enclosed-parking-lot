@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fangle.parking.mapper.ParkingUnpayHistoryMapper">
+    <insert id="insertParkingUnpayHistory" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO
+        parking_unpay_history(parking_order,should_pay,plate_number,plate_color,plate_type,car_color,car_type,arrive_time,
+        entrance_num,arrive_pic_url,arrive_pic_upStatus,arrive_up_status,leave_time,exit_num,enter_type)
+         VALUES
+         (#{parkingOrder},#{shouldPay},#{plateNumber},#{plateColor},#{plateType},#{carColor},#{carType},#{arriveTime},
+         #{entranceNum},#{arrivePicUrl},#{arrivePicUpStatus},#{arriveUpStatus},#{leaveTime},#{exitNum},#{enterType})
+    </insert>
+</mapper>

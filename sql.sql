@@ -59,3 +59,16 @@ CREATE TABLE `parking_history` (
 PRIMARY KEY ( `id` ),
 UNIQUE KEY `UK_PARING_H_ORDER` ( parking_order )
 ) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8 COMMENT = '停车场历史停车信息表';
+
+DROP TABLE IF EXISTS parking_pay_order;
+CREATE TABLE `parking_pay_order` (
+`id` INT NOT NULL AUTO_INCREMENT COMMENT '编号',
+`parking_order` VARCHAR ( 64 ) NOT NULL DEFAULT '' COMMENT '停车订单',
+`pay_order` VARCHAR ( 64 ) NOT NULL DEFAULT '' COMMENT '支付订单',
+`pay_mode` INT NOT NULL DEFAULT '1' COMMENT '支付方式 0 包月 1 现金 2 未支付 3 标签 4 一卡通 5 中央收费岗亭 6 电子钱包 7 App在线支付 8 微信公众号在线支付 9 微信扫码支付 10 支付宝扫码支付 11 银联主动支付 12 银联无感支付',
+`pay_fee` INT NOT NULL DEFAULT '0' COMMENT '支付金额',
+`pay_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ( ) COMMENT '支付时间',
+`create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ( ) COMMENT '创建时间',
+PRIMARY KEY ( `id` ),
+UNIQUE KEY `UK_PARING_P_ORDER` ( parking_order )
+) ENGINE = INNODB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8 COMMENT = '停车场支付订单表';

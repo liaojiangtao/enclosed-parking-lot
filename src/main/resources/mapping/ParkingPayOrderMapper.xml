@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fangle.parking.mapper.ParkingPayOrderMapper">
+    <resultMap id="ParkingPayOrderResult" type="com.fangle.parking.entity.ParkingPayOrder">
+        <id column="parking_order" property="parkingOrder" jdbcType="VARCHAR"/>
+        <id column="pay_order" property="payOrder" jdbcType="VARCHAR"/>
+        <id column="pay_mode" property="payMode" jdbcType="INTEGER"/>
+        <id column="pay_fee" property="payFee" jdbcType="INTEGER"/>
+        <id column="pay_time" property="payTime" jdbcType="DATE"/>
+        <id column="create_time" property="createTime" jdbcType="DATE"/>
+    </resultMap>
+
+    <insert id="insertParkingPayOrder" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO
+        parking_pay_order(parking_order,pay_order,pay_mode,pay_fee,pay_time)
+         VALUES
+         (#{parkingOrder},#{payOrder},#{payMode},#{payFee},#{payTime})
+    </insert>
+
+    <select id="queryParkingPayOrder" resultMap="ParkingPayOrderResult">
+        SELECT
+        parking_order,
+        pay_order,
+        pay_mode,
+        pay_fee,
+        pay_time,
+        create_time
+        FROM
+        parking_pay_order
+        WHERE
+        parking_order = #{parkingOrder}
+        ORDER BY pay_time
+		DESC
+    </select>
+
+    <select id="queryAllParkingPayOrder" resultMap="ParkingPayOrderResult">
+        SELECT
+        parking_order,
+        pay_order,
+        pay_mode,
+        pay_fee,
+        pay_time,
+        create_time
+        FROM
+        parking_pay_order
+        ORDER BY pay_time
+		DESC
+    </select>
+
+</mapper>

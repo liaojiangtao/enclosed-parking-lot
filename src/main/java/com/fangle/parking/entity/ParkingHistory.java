@@ -8,6 +8,7 @@ package com.fangle.parking.entity;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class ParkingHistory {
@@ -33,4 +34,4 @@ public class ParkingHistory {
     private Integer leaveType;    //出场类型 自动抬杆 手动抬杆
     private Date createTime;    //创建时间
     private Date updateTime;    //更新时间
-    }
+}

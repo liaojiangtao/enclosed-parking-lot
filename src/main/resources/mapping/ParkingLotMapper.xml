@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fangle.parking.mapper.ParkingLotMapper">
 
-    <resultMap id="BaseResultMap" type="com.fangle.parking.entity.ParkingLot">
+    <resultMap id="ParkingLotResult" type="com.fangle.parking.entity.ParkingLot">
         <id column="parking_lot_id" property="parkingLotId" jdbcType="INTEGER" />
         <id column="parking_lot_name" property="parkingLotName" jdbcType="VARCHAR" />
         <id column="effect_time" property="effectTime" jdbcType="DATE" />
@@ -10,7 +10,7 @@
         <id column="create_time" property="createTime" jdbcType="DATE" />
     </resultMap>
 
-    <select id="selectAllParkingLot" resultMap="BaseResultMap">
+    <select id="selectAllParkingLot" resultMap="ParkingLotResult">
         SELECT parking_lot_id, parking_lot_name, effect_time, update_time, create_time
         FROM parking_lot_info
     </select>
