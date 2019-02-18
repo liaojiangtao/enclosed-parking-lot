@@ -4,13 +4,13 @@ import com.fangle.parking.mapper.ParkingLotMapper;
 import com.fangle.parking.entity.ParkingLot;
 import com.fangle.parking.service.ParkingLotService;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@Slf4j
 public class ParkingLotServiceImpl implements ParkingLotService {
     @Autowired
     private ParkingLotMapper parkingLotMapper;
