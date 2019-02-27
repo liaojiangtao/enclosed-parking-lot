@@ -10,4 +10,9 @@ public class TimeUtil {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return sdf.parse(stringDate);
     }
+
+    public static String TimeStampToDateString(Integer timeStamps){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return format.format(timeStamps * 1000L);
+    }
 }
